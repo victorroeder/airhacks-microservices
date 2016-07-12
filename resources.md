@@ -1,1 +1,15 @@
 #Resources
+
+https://en.wikipedia.org/wiki/Cryptographic_nonce
+https://en.wikipedia.org/wiki/CAP_theorem
+http://apievangelist.com/2012/01/12/the-secret-to-amazons-success-internal-apis/
+https://github.com/AdamBien/docklands
+http://www.projectatomic.io
+https://coreos.com
+https://vmware.github.io/photon/
+https://github.com/Netflix/Hystrix/wiki/How-To-Use
+https://github.com/AdamBien/breakr/blob/master/breakr/src/main/java/com/airhacks/breakr/Breakr.java
+http://www.haproxy.org
+https://httpd.apache.org/docs/current/mod/mod_proxy.html
+http://mod-cluster.jboss.org
+http://nginx.org/en/docs/http/load_balancing.html
