@@ -1,4 +1,4 @@
-package com.airhacks.numbers.monitoring.control;
+package com.airhacks.monitoring.control;
 
 import javax.enterprise.event.Observes;
 

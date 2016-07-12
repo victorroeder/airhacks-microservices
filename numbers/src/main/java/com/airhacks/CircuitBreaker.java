@@ -17,10 +17,13 @@ public class CircuitBreaker {
     @Inject
     Event<String> notifications;
 
+    @Inject
+    int maxError;
+
     @AroundInvoke
     public Object watch(InvocationContext ic) throws Exception {
         System.out.println("-- " + ic.getMethod());
-        if (errorCounter.get() > 3) {
+        if (errorCounter.get() > this.maxError) {
             notifications.fire("Circuit opened with: " + ic.getMethod());
             System.out.println("--- opening the circuit");
             return null;
