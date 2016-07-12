@@ -1,7 +1,9 @@
 package com.airhacks.numbers.boundary;
 
+import com.airhacks.CircuitBreaker;
 import javax.annotation.PostConstruct;
-import javax.ejb.Stateless;
+import javax.ejb.Singleton;
+import javax.interceptor.Interceptors;
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.WebTarget;
@@ -10,7 +12,8 @@ import javax.ws.rs.client.WebTarget;
  *
  * @author airhacks.com
  */
-@Stateless
+@Singleton
+@Interceptors(CircuitBreaker.class)
 public class NumberGenerator {
 
     private Client client;
@@ -19,11 +22,11 @@ public class NumberGenerator {
     @PostConstruct
     public void init() {
         this.client = ClientBuilder.newClient();
-        this.tut = this.client.target("http://localhost:8080/numberprovider/resources/numbers");
     }
 
     public String numbers() {
-        return this.tut.request().get(String.class);
+        WebTarget target = this.client.target("http://localhos:8080/numberprovider/resources/numbers");
+        return target.request().get(String.class);
     }
 
 }
