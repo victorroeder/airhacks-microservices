@@ -10,7 +10,9 @@ import javax.ejb.Stateless;
 public class NumberGenerator {
 
     public String numbers() {
-        return "--- " + System.currentTimeMillis();
+        System.out.println("-- numbers called " + Thread.currentThread().getName());
+        //return "--- " + System.currentTimeMillis();
+        throw new IllegalStateException("lunch break");
     }
 
 }
