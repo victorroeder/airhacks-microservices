@@ -6,7 +6,7 @@ package com.airhacks.javaorchestration;
  */
 public class Archiver {
 
-    public void save(long number) {
+    public static void save(long number) {
         System.out.println("number = " + number);
     }
 

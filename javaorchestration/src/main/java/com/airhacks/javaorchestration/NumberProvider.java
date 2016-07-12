@@ -6,7 +6,7 @@ package com.airhacks.javaorchestration;
  */
 public class NumberProvider {
 
-    public long random() {
+    public static long random() {
         return System.currentTimeMillis();
     }
 

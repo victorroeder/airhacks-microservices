@@ -6,7 +6,7 @@ package com.airhacks.javaorchestration;
  */
 public class Transformer {
 
-    public long transform(long input) {
+    public static long transform(long input) {
         return input * 2;
     }
 
