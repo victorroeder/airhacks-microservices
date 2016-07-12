@@ -25,7 +25,7 @@ public class NumberGenerator {
     }
 
     public String numbers() {
-        WebTarget target = this.client.target("http://localhos:8080/numberprovider/resources/numbers");
+        WebTarget target = this.client.target("http://provider:8080/numberprovider/resources/numbers");
         return target.request().get(String.class);
     }
 

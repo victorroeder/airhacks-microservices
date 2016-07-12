@@ -23,7 +23,7 @@ public class NumbersResource {
     @Inject
     NumberGenerator generator;
 
-    @Resource(mappedName = "concurrent/airhacks")
+    @Resource
     ManagedExecutorService mes;
 
     @GET
