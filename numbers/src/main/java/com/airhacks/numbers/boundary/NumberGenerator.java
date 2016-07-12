@@ -1,8 +1,10 @@
 package com.airhacks.numbers.boundary;
 
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import javax.annotation.PostConstruct;
 import javax.ejb.Stateless;
+import javax.ws.rs.client.Client;
+import javax.ws.rs.client.ClientBuilder;
+import javax.ws.rs.client.WebTarget;
 
 /**
  *
@@ -11,14 +13,17 @@ import javax.ejb.Stateless;
 @Stateless
 public class NumberGenerator {
 
+    private Client client;
+    private WebTarget tut;
+
+    @PostConstruct
+    public void init() {
+        this.client = ClientBuilder.newClient();
+        this.tut = this.client.target("http://localhost:8080/numberprovider/resources/numbers");
+    }
+
     public String numbers() {
-        System.out.println("-- numbers called " + Thread.currentThread().getName());
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException ex) {
-            Logger.getLogger(NumberGenerator.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        return "--- " + System.currentTimeMillis();
+        return this.tut.request().get(String.class);
     }
 
 }
