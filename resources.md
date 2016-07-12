@@ -13,3 +13,15 @@ http://www.haproxy.org
 https://httpd.apache.org/docs/current/mod/mod_proxy.html
 http://mod-cluster.jboss.org
 http://nginx.org/en/docs/http/load_balancing.html
+https://docs.docker.com/engine/admin/host_integration/
+http://www.adam-bien.com/roller/abien/entry/java_ee_7_sending_json
+https://github.com/AdamBien/javaeetesting/tree/master/echosocks-st
+https://github.com/AdamBien/javaeetesting/blob/master/echosocks-st/src/test/java/com/airhacks/echo/boundary/EchoEndpointIT.java
+https://www.elastic.co/blog/introducing-logstash-input-http-plugin
+http://12factor.net
+https://medium.com/@ericclemmons/javascript-fatigue-48d4011b6fc4
+https://github.com/AdamBien/headlands
+https://varnish-cache.org
+http://www.squid-cache.org/
+https://httpd.apache.org/docs/current/mod/mod_cache.html
+http://tomee.apache.org/downloads.html
